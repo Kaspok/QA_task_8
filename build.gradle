@@ -7,11 +7,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "com.codeborne:selenide:5.22.3",
+            "org.apache.poi:poi-ooxml:5.0.0",
+            "org.assertj:assertj-core:3.19.0",
             "org.junit.jupiter:junit-jupiter-api:5.7.2")
 
-    testRuntimeOnly (
+    testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:5.7.2",
             "org.slf4j:slf4j-simple:1.7.30")
 }
