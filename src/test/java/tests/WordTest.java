@@ -14,6 +14,7 @@ public class WordTest {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream resourceAsStream = classLoader.getResourceAsStream("TestWord.docx");
         XWPFDocument docFile = new XWPFDocument(resourceAsStream);
-        assertThat(docFile.getDocument().toString()).contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus odio.");
+        String textFromFile =  docFile.getDocument().toString();
+        assertThat(textFromFile.contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus odio."));
     }
 }
